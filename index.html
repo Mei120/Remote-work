@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Remote Work</title>
+  <link rel=stylesheet type="text/css" href="light.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"></link>
+</head>
+<body>
+    <div class="col-lg-6">
+        <!-- START card -->
+        <div class="card card-default">
+          <div class="card-header ">
+            <div class="card-title">
+              Form
+            </div>
+          </div>
+          <div class="card-body">
+            <form role="form">
+              <div class="form-group">
+                <label>姓名</label>
+                <span class="help">e.g. "Melody Lee"</span>
+                <input type="text" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>電話</label>
+                <span class="help">e.g. "0960070793"</span>
+                <input type="number" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label>聯絡地址</label>
+                <span class="help">e.g. "新竹市"</span>
+                <input type="text" class="form-control" required>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+        <!-- END card -->
+      </div>
+      <button style="width:120px;height:40px;border:2px #9999FF dashed;" onclick='alertTest()'>按我 </button>
+      <script>
+          function alertTest() {
+            swal.fire('太好了!',
+                      '送出成功!',
+                      'success'
+                     );
+          }
+
+      </script>
+      <hr>
+      <table id="example" class="display">
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>收盤</th>
+                <th>開盤</th>
+                <th>高</th>
+                <th>低</th>
+                <th>交易量</th>
+                <th>漲跌幅</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2021年9月23日</td>
+                <td>146.27</td>
+                <td>146.72</td>
+                <td>146.72</td>
+                <td>145.95</td>
+                <td>3.86M</td>
+                <td>0.29%</td>
+            </tr>
+            <tr>
+                <td>2021年9月22日</td>
+                <td>145.85</td>
+                <td>144.45</td>
+                <td>146.42</td>
+                <td>143.73</td>
+                <td>75.29M</td>
+                <td>1.69%</td>
+            </tr>
+            <tr>
+                <td>2021年9月21日</td>
+                <td>143.43</td>
+                <td>143.93</td>
+                <td>144.60</td>
+                <td>142.78</td>
+                <td>75.17M</td>
+                <td>0.34%</td>
+            </tr>
+            <tr>
+                <td>2021年9月20日</td>
+                <td>142.94</td>
+                <td>143.80</td>
+                <td>144.84</td>
+                <td>141.27</td>
+                <td>123.04M</td>
+                <td>-2.14%</td>
+            </tr>
+            <tr>
+                <td>2021年9月17日</td>
+                <td>146.06</td>
+                <td>148.82</td>
+                <td>148.82</td>
+                <td>145.76</td>
+                <td>129.87M</td>
+                <td>-1.83%</td>
+            </tr>
+            <tr>
+                <td>2021年9月16日</td>
+                <td>148.79</td>
+                <td>148.44</td>
+                <td>148.97</td>
+                <td>147.22</td>
+                <td>67.88M</td>
+                <td>-0.16%</td>
+            </tr>
+            <tr>
+                <td>2021年9月15日</td>
+                <td>149.03</td>
+                <td>148.56</td>
+                <td>149.44</td>
+                <td>146.37</td>
+                <td>81.63M</td>
+                <td>0.61%</td>
+            </tr>
+            <tr>
+                <td>2021年9月14日</td>
+                <td>148.12</td>
+                <td>150.35</td>
+                <td>151.07</td>
+                <td>146.91</td>
+                <td>108.41M</td>
+                <td>-0.96%</td>
+            </tr>
+            <tr>
+                <td>2021年9月13日</td>
+                <td>149.55</td>
+                <td>150.63</td>
+                <td>151.42</td>
+                <td>148.75</td>
+                <td>97.79M</td>
+                <td>0.39%</td>
+            </tr>
+            <tr>
+                <td>2021年9月10日</td>
+                <td>148.97</td>
+                <td>155.00</td>
+                <td>155.48</td>
+                <td>148.70</td>
+                <td>140.89M</td>
+                <td>-3.31%</td>
+            </tr>
+        </tbody>
+    </table>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+      <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+     
+      <script>
+          $(document).ready(function () {
+        
+        // $("#example").DataTable();
+
+          $('#example').DataTable( {columnDefs: [
+    {
+        targets: 1,
+        className: 'dt-head-center'
+    }
+  ]
+} );
+        
+    });
+      </script>
+</body>
+</html>
